@@ -1,0 +1,64 @@
+input {
+    width: 100%;
+    height: 40px;
+    padding: 12px 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+}
+
+#inputDiv {
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+#corpo {
+    border-radius: 10px;
+    border-color: black;
+    border-style:solid;
+    background-color: white;
+    max-width: 500px;
+    height: max-content;
+}
+
+#new {
+    margin: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    position: relative;
+    display: block;
+}
+
+#imagem {
+    display: block;
+    margin: auto;
+    top: 20px;
+    position: relative;
+}
+
+#text {
+    top: 50px;
+    margin: auto;
+    font-size: 10;
+    max-width: 400px;
+    text-align: center;
+    display: block;
+}
+
+#texto {
+    font-size: 10;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    max-width: 400px;
+    margin-top: 40px;
+    display: block;
+}
+
+hr {
+    position: relative;
+    top: 30px;
+}

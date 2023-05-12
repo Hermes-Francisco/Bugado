@@ -5,22 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/webp" href="bug.webp">
+    <link rel="stylesheet" href="style.css">
     <title>Bugado</title>
 </head>
 <body>
-    <div id="canvas">
-        <img src="bug.webp" id="image" />
-        <h1 id="texto"></h1>
+    <div id="corpo">
+        <div id="canvas" style="display: none">
+            <img src="bug.webp" id="imagem" height="200px"/>
+            <hr>
+            <div id="text">
+                <h1 id="texto"></h1>
+            </div>
+        </div>
+    
+        <form method="get" id="form">
+            <div id="inputDiv">
+                <label for="name">Nome</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="days">Número de dias:</label><br>
+                <input type="number" id="days" name="days">
+                <input type="submit" />
+            </div>
+        </form>
     </div>
 
-    <form method="get" id="form">
-        <label for="name">Nome</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="days">Número de dias:</label><br>
-        <input type="number" id="days" name="days">
-        <input type="submit" />
-    </form>
-
-    <a href="/" id="new">Gerar novo</a>
+    <a href="/" id="new" class="items" style="display: none">Gerar novo</a>
+    <script src="index.js"></script>
+    <!--Programado por Hermes Francisco 11/05/2023-->
 </body>
 </html>
