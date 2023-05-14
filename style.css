@@ -17,7 +17,7 @@ input {
     display: inline-block;
 }
 
-#corpo {
+#conteudo {
     border-radius: 10px;
     border-color: black;
     border-style:solid;
@@ -26,12 +26,11 @@ input {
     height: max-content;
 }
 
-#new {
-    margin: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    position: relative;
+.link {
+    width: 500px;
+    margin-top: 10px;
     display: block;
+    text-align: center;
 }
 
 #imagem {
