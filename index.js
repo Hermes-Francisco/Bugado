@@ -1,5 +1,5 @@
 const params = Object.fromEntries(new URLSearchParams(window.location.search).entries())
-const { name = '', days = '' } = params;
+const { name = '', days = '', remember = false } = params;
 
 if (name.length > 0 && ! isNaN(days) && days.length > 0) {
     const downloadLink = document.getElementById('download');
@@ -16,4 +16,33 @@ if (name.length > 0 && ! isNaN(days) && days.length > 0) {
         downloadLink.href = canvas.toDataURL("image/png");
         document.getElementById('thumb').content = downloadLink.href;
     });
+
+    let newRecord = days;
+    let cookies = getCookies();
+
+    console.log(cookies);
+
+    if(cookies[nome]) {
+        document.cookie = `${btoa(nome)}={"days":${newRecord}}`;
+
+        cookies = getCookies();
+    }
+}
+
+function getCookies() {
+    cookies = {};
+
+    document.cookie.split(';').forEach((cookie) => {
+        if (cookie.length === 0) {
+            return;
+        }
+
+        let [key, value] = cookie.split('=');
+
+        value = JSON.parse(value);
+
+        cookies[atob(key)] = value;
+    });
+
+    return cookies;
 }
